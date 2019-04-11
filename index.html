@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=K2D" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <title>Victoria & Albert Search</title>
+</head>
+<body>
+    <div class="headerBackground">
+        <img src="images/header-pattern.svg" alt="V & A Background">
+    </div>
+    <div class="itemShowcaseWrapper">
+        <div class="itemShowcase">
+            <div class="closeShowcase">
+                <i class="far fa-times-circle"></i>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="container">
+            <!-- SVG Animation Contained within the SVG Document to keep the Markup Clean! -->
+            <img class="vaLogo" src="images/va-logo.svg" alt="Victoria & Albert Museum Logo">
+            <h1>Search</h1>
+            <div class="searchArea">
+                <form>
+                    <input class="collection" type="text">
+                    <button class="collectionBtn"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            <div class="collectionResult">
+                <h2>Nothing here yet!</h2>
+                <section class="gallery">
+                </section>
+                <div class="showMore">
+                    <div class="showMoreControl prev">
+                            <i class="fas fa-arrow-left"></i>
+                    </div>
+
+                        <div class="showMoreInfo"></div>
+
+                    <div class="showMoreControl next">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="footerContainer">
+                    © Victoria & Albert Museum 2018 - Single Page Application (SPA) Designed and Developed by James Rogers
+            </div>
+        </footer>
+    </div>
+<script src="scripts/index.js"></script>
+</body>
+</html>
