@@ -64,29 +64,9 @@ function query(pageNumber = 1) {
   let collectionValue = collectionInput.value;
   let template = ``;
 
-  /*
-    Here I am validating the collectionValue to make sure that somthing has been entered to be searched. If it is equal to nothing then
-    the collectionResult div will be set to a message in which the end user will see. This is done via textContent which is the correct way
-    of setting the content as it is simply a string which the textContent node accepts.
-    */
   if (collectionValue === "") {
     collectionResult.textContent = "Please enter a search term.";
   } else {
-    /*
-        If there is data within the collectionValue variable then we can continue on with the query.
-        To query the V & A API I'm using the Fetch API which is a newer alternative than previous XMLHttpRequest(XHR)/AJAX methods.
-        The fetch API is async by nature. It uses promises which makes it easier to handle and avoids using callbacks which can get 
-        fairly complex depending on complexity of the API/Data request.
-
-        I have also chained the promises which has enabled me to access data across the requests. The first thing to do when using the fetch
-        API was to specify the URL/URI in my case I used ES6 Template Strings (Template Litreal) which uses backticks (``) and allows inline templating funcitonality
-        within the string this is great as it means I don't have to concatinate the URL string and vairbles together which can get fairly complex
-        when there is alot of URL parameters.
-
-        In the V&A API the main parameter is the search query for this I am simply passing in the collectionValue via the use of the
-        template strings. The next paramter is the offset this is used to get the rest of the results from the query as the V & A has a deafult limit
-        of 15 records per request this can be changed by using the limit paramter but I have decided to keep it at the deafult.
-        */
     fetch(
       `https://api.vam.ac.uk/v2/objects/search?q=${collectionValue}&page=${pageNumber}&page_size=15`
     )
